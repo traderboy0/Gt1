@@ -1,149 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  <title>Trade with Gautam - Learning Community</title>
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+    }
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 15px;
+    }
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
+    .card {
+      width: 100%;
+      max-width: 380px;
+      background: linear-gradient(145deg, #010a0f, #02070b);
+      border: 1.5px solid #00d2ff;
+      border-radius: 28px;
+      padding: 24px 18px;
+      text-align: center;
+      box-shadow:
+        0 0 25px rgba(0, 210, 255, 0.15),
+        inset 0 0 20px rgba(0, 210, 255, 0.03);
+    }
 
-  .feature-item:last-child { border-bottom: none; }
+    .profile-img {
+      display: block;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      border: 3px solid #00d2ff;
+      object-fit: cover;
+      box-shadow: 0 0 18px rgba(0, 210, 255, 0.55);
+    }
 
-  .icon { margin-right: 12px; font-size: 16px; }
+    h1 {
+      margin: 0 0 18px;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1.3;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
+    .features {
+      width: 100%;
+      margin: 0 auto;
+      text-align: left;
+    }
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      color: #d5d5d5;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 11px 4px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
+    .feature-item:last-child {
+      border-bottom: none;
+    }
 
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
+    .icon {
+      min-width: 30px;
+      margin-right: 8px;
+      font-size: 17px;
+      text-align: center;
+    }
 
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
+    .join-text {
+      color: #eee;
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 20px 5px 13px;
+      font-weight: 400;
+    }
 
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
-</style>
+    .telegram-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 16px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      box-shadow: 0 5px 18px rgba(0, 210, 255, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .telegram-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 22px rgba(0, 210, 255, 0.45);
+    }
+
+    .hindi-quote {
+      color: #aaa;
+      font-size: 12px;
+      line-height: 1.6;
+      margin: 18px 5px;
+    }
+
+    .footer-box {
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      background: rgba(0, 210, 255, 0.03);
+      border-radius: 12px;
+      padding: 10px 8px;
+      font-size: 10px;
+      line-height: 1.5;
+      color: #888;
+    }
+
+    .footer-box a {
+      color: #00d2ff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .disclaimer {
+      font-size: 9px;
+      line-height: 1.5;
+      color: #555;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 360px) {
+      body {
+        padding: 10px;
+      }
+
+      .card {
+        padding: 20px 14px;
+        border-radius: 24px;
+      }
+
+      .profile-img {
+        width: 95px;
+        height: 95px;
+      }
+
+      h1 {
+        font-size: 19px;
+      }
+
+      .feature-item {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+  <div class="card">
 
-  <h1>Munaaf</h1>
+    <img
+      src="https://i.ibb.co/Rp3Jwj7y/rs-Sa-G-Z7-R4-*#@d-GNlge-Yi-L1-afy-2ma76a6--v-Zd-Xia-MAIZ-Uk-DR-tpvw-AMV.jpg"
+      alt="Trade with Gautam"
+      class="profile-img"
+    >
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
+    <h1>Trade with Gautam</h1>
+
+    <div class="features">
+
+      <div class="feature-item">
+        <span class="icon">📚</span>
+        <span>Learning &amp; Educational Sessions</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">📊</span>
+        <span>Market Concepts &amp; Awareness</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">📈</span>
+        <span>Chart Reading Concepts</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">💡</span>
+        <span>Educational Case Discussions</span>
+      </div>
+
+    </div>
+
+    <p class="join-text">
+      Join our learning community and grow your knowledge
+    </p>
+
+    <a
+      href="https://t.me/+IT5avGuMDSY2NzRl"
+      class="telegram-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      JOIN TELEGRAM
+    </a>
+
+    <p class="hindi-quote">
+      सीखते रहें, समझते रहें और अपने ज्ञान को लगातार बेहतर बनाते रहें।
+    </p>
+
+    <div class="footer-box">
+      This Channel Advertise By
+      <a
+        href="https://t.me/+3XoqJNLxYHswNTc1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        AD BUILD AGENCY
+      </a>
+    </div>
+
+    <div class="disclaimer">
+      Terms | Privacy | Disclaimer<br>
+      This site is not part of Facebook or endorsed by Facebook.
+    </div>
+
   </div>
-
-  <p class="join-text">Join our learning community and grow your knowledge</p>
-
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
-
-  <p class="hindi-quote">     ,     </p>
-
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
-
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
-</div>
 
 </body>
 </html>
